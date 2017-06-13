@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.CLIENT.LoginViewController">
+    <children>
+      <ImageView fitHeight="589.0" fitWidth="524.0" layoutX="-7.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tlo1.jpg" />
+         </image></ImageView>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="117.0" prefWidth="471.0" spacing="10.0">
+            <children>
+                <TextField fx:id="fieldServerIP" alignment="TOP_CENTER" promptText="Server IP 'localhost'" />
+                <TextField fx:id="fieldServerPort" alignment="TOP_CENTER" promptText="Server Port '8080'" />
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutX="288.0" layoutY="288.0" prefHeight="195.0" prefWidth="201.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="149.0" text="Log in">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fieldUsername" alignment="TOP_CENTER" promptText="Username">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextField>
+                <PasswordField fx:id="fieldPassword" alignment="TOP_CENTER" promptText="Password">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </PasswordField>
+                <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnLogInAction" prefHeight="25.0" prefWidth="85.0" text="Log In" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="288.0" prefHeight="236.0" prefWidth="201.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="149.0" text="Register">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="fieldNewUsername" alignment="TOP_CENTER" promptText="Username" />
+                <PasswordField fx:id="fieldNewPassword" alignment="TOP_CENTER" promptText="Password" />
+                <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="202.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveAction" prefHeight="25.0" prefWidth="73.0" text="Create" />
+                        <Button fx:id="btnClear" mnemonicParsing="false" onAction="#btnClearAction" prefHeight="25.0" prefWidth="73.0" text="Clear" />
+                    </children>
+                </HBox>
+                <Label fx:id="labelNewError" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="246.0" textFill="#da0000">
+                    <font>
+                        <Font size="10.0" />
+                    </font></Label>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
